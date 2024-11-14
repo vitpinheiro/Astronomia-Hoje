@@ -6,9 +6,22 @@
     <title>Astronomia hoje</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Courgette&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-ILU+3nGrT9E6c+hZXxOX7onfSBdT4PzqjT/m9zNxAPec+zVjLTVXK8u89D4p0Whw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Mover as imagens do carrossel para a direita */
+        .carousel-item img {
+            object-fit: cover;
+            width: 60%; /* Ajuste a largura conforme necessário */
+            margin-left: auto; /* Mover para a direita */
+        }
+
+        /* Ajustar o tempo de transição do carrossel (aqui definindo como 5000ms = 5 segundos) */
+        .carousel-inner {
+            transition: transform 1s ease; /* Ajuste o tempo conforme necessário */
+        }
+    </style>
 </head>
 <body style="background-color: black;">
 
@@ -16,7 +29,7 @@
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#" style="color:white;">
                 <img src="images/logo.png" class="logo" alt="Logo">
-                <h1 class="page-title ms-3">Astronomia Hoje</h1> <!-- Adicionando ms-3 para espaçamento -->
+                <h1 class="page-title ms-3">Astronomia Hoje</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,20 +55,49 @@
     
     <img class="d-flex mx-auto banner-img" src="images/banner.png" alt="Banner">
 
-    <div class="nebulosas text-center" style="background-color:#820000; color:white;"><h2>Nebulosas</h2></div>
+    <div class="nebulosas text-center" style="background-color:#820000; color:white;">
+        <h2>Notícias em Destaque</h2>
+    </div>
 
-    <figure class="nebulosa-figure mb-5">
-        <p class="nebulosa-text">Nebulosa de Hélix, também conhecida como Nebulosa da Hélice, A Hélix ou NGC 7293 é uma nebulosa planetária localizada na constelação de Aquarius (ou Aquário). Também foi apelidada de "Olho de Deus" devido ao seu formato visto da Terra. Considerada uma das nebulosas mais próximas do planeta Terra, a Helix encontra-se a 650 anos-luz de distância, na constelação de Aquário. </p>
-        <img class="nebulosa-img" src="images/nebulosa.png" alt="Nebulosa de Hélix">
-    </figure>
-    
+    <!-- Início do carrossel -->
+    <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="5000"> <!-- Intervalo de 5 segundos -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <figure class="nebulosa-figure">
+                    <img class="nebulosa-img d-block w-100" src="images/cometa.webp" alt="Cometa do Século">
+                    <p class="nebulosa-text">Imagem do “cometa do século” revela fenômeno inesperado em sua cauda</p>
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="nebulosa-figure">
+                    <img class="nebulosa-img d-block w-100" src="images/nebulosa.png" alt="Cometa 2">
+                    <p class="nebulosa-text">Uma nova descoberta sobre o cometa pode mudar a forma como o estudamos</p>
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="nebulosa-figure">
+                    <img class="nebulosa-img d-block w-100" src="images/cometa3.webp" alt="Cometa 3">
+                    <p class="nebulosa-text">O cometa pode ter sido formado por uma colisão de asteroides</p>
+                </figure>
+            </div>
+        </div>
+        <!-- Controles do carrossel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+    <!-- Fim do carrossel -->
 
     <footer class="mt-5" style="background-color: #2C6A96; width: 100%; padding: 20px 0; text-align: center; color: white;">
         Desenvolvido por Vitória Pinheiro
     </footer>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9fTt3hQ3UJjLDzO0CuqFs3BfMlZZe60bN9EpIrn98mH0YFHZV1mGScp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
