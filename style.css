@@ -21,7 +21,9 @@ body {
     font-size: 2rem; 
     color: white;
     margin: 0;
+    text-decoration: none;
 }
+
 
 /* Navbar */
 .navbar-brand {
@@ -76,6 +78,47 @@ body {
     height: auto; /* Mantém a proporção da imagem */
 }
 
+    /* Mover as imagens do carrossel para a direita */
+    .carousel-item img {
+    object-fit: cover;
+    width: 60%; /* Ajuste a largura conforme necessário */
+    margin-left: auto; /* Mover para a direita */
+}
+
+.banner-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Garante que o texto não apareça fora da área visível */
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Começa fora da tela, à direita */
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    animation: scrollText 15s linear infinite; /* Animação de rolagem */
+  }
+  
+  @keyframes scrollText {
+    0% {
+      left: 100%; /* Começa fora da tela à direita */
+    }
+    100% {
+      left: -100%; /* Termina fora da tela à esquerda */
+    }
+  }
+  
+
 /* Ajustes para telas pequenas */
 @media (max-width: 768px) {
     .page-title {
@@ -97,5 +140,50 @@ body {
 
     .nebulosa-img {
         max-width: 80%; /* Aumenta o tamanho da imagem em telas menores */
+    }
+}
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 768px) {
+    div {
+        width: 100%; /* Ajusta a largura para 100% em telas menores */
+        padding: 10px;
+    }
+
+    figure {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        padding: 15px;
+    }
+
+    img {
+        width: 50em; /* Mantém o tamanho original da imagem */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+        margin-bottom: 2em; /* Adiciona espaço abaixo da imagem */
+    }
+
+    div > div {
+        margin-left: 0; /* Remove a margem esquerda */
+        max-width: 100%; /* Permite que o conteúdo ocupe a largura total */
+        text-align: center; /* Garante que o texto fique centralizado */
+    }
+
+    h2 {
+        font-size: 2em; /* Reduz o tamanho do título */
+    }
+
+    p {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+}
+
+/* Media Query para telas menores que 480px */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em; /* Reduz ainda mais o tamanho do título */
+    }
+
+    p {
+        font-size: 1em; /* Ajusta ainda mais o tamanho da fonte do parágrafo */
     }
 }
