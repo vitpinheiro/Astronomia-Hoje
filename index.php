@@ -57,15 +57,51 @@
         </button>
     </div> --> 
 
-    <div style="background-color: white; width: 85.4%; height: 50em; display: flex; justify-content: center; align-items: center; padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden;">
-    <figure style="display: flex; align-items: center; width: 100%; max-width: 1200px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
+    <div style="background-color: black; width: 85.4%; height: 50em; display: flex; justify-content: center; align-items: center; padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden;">
+    <figure style="display: flex; align-items: center; width: 100%; max-width: 1200px; padding: 20px; background-color: black; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
         <img src="images/vastidaocosmos.jpg" alt="Cometa" style="width: 50em; border-radius: 10px; object-fit: cover; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
         <div style="margin-left: 30px; max-width: 500px; text-align: left;">
-            <h2 style="font-family: 'Arial', sans-serif; font-size: 2.5em; color: #333; margin-bottom: 15px;"><strong>Sobre o Astronomia Hoje</strong></h2>
-            <p style="font-family: 'Arial', sans-serif; font-size: 1.2em; color: #555; line-height: 1.6; text-align: justify;">Esta página é dedicada a promover o fascínio pela astronomia, oferecendo conteúdo enriquecedor sobre as últimas descobertas, fenômenos celestes e a vastidão do cosmos. Nosso objetivo é inspirar curiosidade e aprofundar o entendimento do universo, compartilhando curiosidades, artigos e recursos para que todos possam explorar as maravilhas do céu e refletir sobre nosso lugar no universo.</p>
+            <h2 style="font-family: 'Arial', sans-serif; font-size: 2.5em; color: white; margin-bottom: 15px;"><strong>Sobre o Astronomia Hoje</strong></h2>
+            <p style="font-family: 'Arial', sans-serif; font-size: 1.2em; color: #777; line-height: 1.6; text-align: justify;">Esta página é dedicada a promover o fascínio pela astronomia, oferecendo conteúdo enriquecedor sobre as últimas descobertas, fenômenos celestes e a vastidão do cosmos. Nosso objetivo é inspirar curiosidade e aprofundar o entendimento do universo, compartilhando curiosidades, artigos e recursos para que todos possam explorar as maravilhas do céu e refletir sobre nosso lugar no universo.</p>
         </div>
     </figure>
 </div>
+
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="images/ft1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Chuva de meteoros Perseidas</h5>
+          <p class="card-text">12 de agosto de 2025</p>
+          <a href="#" class="btn btn-primary">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="images/ft2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Eclipse solar total</h5>
+          <p class="card-text">12 de agosto de 2045</p>
+          <a href="#" class="btn btn-primary">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="images/ft3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Oposição de Marte</h5>
+          <p class="card-text">16 de janeiro de 2025</p>
+          <a href="#" class="btn btn-primary">SAIBA MAIS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <?php include 'footer.php'; ?>
 
