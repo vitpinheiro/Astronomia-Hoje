@@ -175,7 +175,26 @@ body {
     p {
         font-size: 1.1em; /* Ajusta o tamanho da fonte do parágrafo */
     }
+    .logo {
+        max-width: 50%;
+        height: auto;
+    }
 }
+/* Media Query para telas menores que 480px */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.8em; /* Reduz ainda mais o tamanho do título */
+    }
+
+    p {
+        font-size: 1em; /* Ajusta ainda mais o tamanho da fonte do parágrafo */
+    }
+    .logo {
+        max-width: 20%;
+        height: auto;
+    }
+}
+
 
 /* Media Query para telas menores que 480px */
 @media (max-width: 480px) {
@@ -185,5 +204,9 @@ body {
 
     p {
         font-size: 1em; /* Ajusta ainda mais o tamanho da fonte do parágrafo */
+    }
+    .logo {
+        max-width: 20%;
+        height: auto;
     }
 }
