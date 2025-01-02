@@ -8,7 +8,7 @@ $books = [
 ];
 
 
-$booksPerPage = 24;
+$booksPerPage = 25;
 
 
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;

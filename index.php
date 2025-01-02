@@ -64,6 +64,7 @@
             background: linear-gradient(45deg, #2a5298, #1e3c72); 
             transform: scale(1.05); 
         }
+        
 
     </style>
 </head>
@@ -177,5 +178,11 @@
     <?php include 'footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.setAttribute('href', 'novidadeseeventos.php');
+        });
+    </script>
+
 </body>
 </html>
