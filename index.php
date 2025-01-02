@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,90 +90,103 @@
     </div>
 
     <div class="container">
-        <h3 class="text-center my-4" style="color: white;">Próximos Eventos</h3>
-        <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/ft1.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Chuva de meteoros Perseidas</h5>
-                                    <p class="card-text">12 de agosto de 2025</p>
-                                    <a href="#" class="btn btn-primary mt-auto">SAIBA MAIS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/ft2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Eclipse solar total</h5>
-                                    <p class="card-text">12 de agosto de 2045</p>
-                                    <a href="#" class="btn btn-primary mt-auto">SAIBA MAIS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/ft3.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Oposição de Marte</h5>
-                                    <p class="card-text">16 de janeiro de 2025</p>
-                                    <a href="#" class="btn btn-primary mt-auto">SAIBA MAIS</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        
-                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/ft1.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Evento Astronômico 4</h5>
-                                    <p class="card-text">Data do Evento</p>
-                                    <a href="#" class="btn btn-primary mt-auto">SAIBA MAIS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/ft2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Evento Astronômico 5</h5>
-                                    <p class="card-text">Data do Evento</p>
-                                    <a href="#" class="btn btn-primary mt-auto">SAIBA MAIS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/ft3.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Evento Astronômico 6</h5>
-                                    <p class="card-text">Data do Evento</p>
-                                    <a href="#" class="btn btn-primary mt-auto">SAIBA MAIS</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <h3 class="text-center my-4" style="color: white;">Próximos Eventos</h3>
+    <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+            <?php
+            
+            $events = [
+                [
+                    'title' => 'Chuva de meteoros Perseidas',
+                    'date' => '12 de agosto de 2025',
+                    'image' => 'images/ft1.png',
+                    'link' => '#',
+                ],
+                [
+                    'title' => 'Eclipse solar total',
+                    'date' => '12 de agosto de 2045',
+                    'image' => 'images/ft2.png',
+                    'link' => '#',
+                ],
+                [
+                    'title' => 'Oposição de Marte',
+                    'date' => '16 de janeiro de 2025',
+                    'image' => 'images/ft3.png',
+                    'link' => '#',
+                ],
+                [
+                    'title' => 'Evento Astronômico 4',
+                    'date' => 'Data do Evento',
+                    'image' => 'images/ft1.png',
+                    'link' => '#',
+                ],
+                [
+                    'title' => 'Evento Astronômico 5',
+                    'date' => 'Data do Evento',
+                    'image' => 'images/ft2.png',
+                    'link' => '#',
+                ],
+                [
+                    'title' => 'Evento Astronômico 6',
+                    'date' => 'Data do Evento',
+                    'image' => 'images/ft3.png',
+                    'link' => '#',
+                ],
                 
+            ];
+
+         
+            $chunks = array_chunk($events, 3);
+
+            $isActive = true;
+            foreach ($chunks as $index => $chunk) {
+                echo '<div class="carousel-item ' . ($isActive ? 'active' : '') . '">';
+                echo '<div class="row">';
+
+                // Cria os 3 div por slide
+                foreach ($chunk as $event) {
+                    echo '<div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">';
+                    echo '<div class="card" style="width: 18rem;">';
+                    echo '<img src="' . $event['image'] . '" class="card-img-top" alt="...">';
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">' . $event['title'] . '</h5>';
+                    echo '<p class="card-text">' . $event['date'] . '</p>';
+                    echo '<a href="' . $event['link'] . '" class="btn btn-primary mt-auto">SAIBA MAIS</a>';
+                    echo '</div></div></div>';
+                }
+
+                echo '</div></div>';
+                $isActive = false;
+            }
+            ?>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+    </div>
+
+    <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="background-image: url('images/'); background-size: cover; background-repeat: repeat; background-position: center; height: 250px; border-radius: 10px;">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+                    <h5 class="card-title text-white">Descubra mais sobre Astronomia</h5>
+                    <p class="card-text text-white mb-4">Explore uma seleção de livros sobre astronomia e aumente seu conhecimento sobre o cosmos.</p>
+                    <a href="livros.php" class="btn btn-secondary">Ver Mais</a>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
         </div>
     </div>
+    </div>
+
+    
 
     <?php include 'footer.php'; ?>
 
