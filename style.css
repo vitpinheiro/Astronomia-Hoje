@@ -78,6 +78,7 @@ body {
     color: white;
 }
 
+
 .nebulosa-figure {
     display: flex;
     align-items: center;
@@ -184,6 +185,15 @@ body {
     transform: scale(1.05); 
     }
     
+  .book-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajuste a altura conforme necessário */
+    }
+      
+  .img-fluid {
+    cursor: pointer;
+    }
 
   
   @keyframes scrollText {

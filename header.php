@@ -20,7 +20,7 @@
                     <a class="nav-link" href="livros.php" style="color:white;">Livros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color:white;">Multimidia</a>
+                    <a class="nav-link" href="multimidia.php" style="color:white;">Multimidia</a>
                 </li>
             </ul>
         </div>

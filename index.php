@@ -40,11 +40,9 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5); 
         }
-        .carousel-control-prev {
-            left: -2%; 
-        }
-        .carousel-control-next {
-            right: -2%; 
+ 
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            border-radius: 50%;
         }
 
         .btn-primary {
@@ -142,22 +140,23 @@
             foreach ($chunks as $index => $chunk) {
                 echo '<div class="carousel-item ' . ($isActive ? 'active' : '') . '">';
                 echo '<div class="row">';
-
+            
                 // Cria os 3 div por slide
                 foreach ($chunk as $event) {
                     echo '<div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4">';
-                    echo '<div class="card" style="width: 18rem;">';
-                    echo '<img src="' . $event['image'] . '" class="card-img-top" alt="...">';
+                    echo '<div class="card" style="width: 18rem; border-radius: 10px; overflow: hidden;">';
+                    echo '<img src="' . $event['image'] . '" class="card-img-top" alt="..." >';
                     echo '<div class="card-body">';
                     echo '<h5 class="card-title">' . $event['title'] . '</h5>';
                     echo '<p class="card-text">' . $event['date'] . '</p>';
                     echo '<a href="' . $event['link'] . '" class="btn btn-primary mt-auto">SAIBA MAIS</a>';
                     echo '</div></div></div>';
                 }
-
+            
                 echo '</div></div>';
                 $isActive = false;
             }
+            
             ?>
         </div>
 
@@ -174,8 +173,8 @@
 
     <div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card" style="background-image: url('images/'); background-size: cover; background-repeat: repeat; background-position: center; height: 250px; border-radius: 10px;">
+        <div class="col-md-11">
+            <div class="card" style="background-image: url('images/'); background-size: cover; background-repeat: repeat; background-position: center; height: 250px; border-radius: 10px; margin-top: 20px;"> <!-- Adicionada margin-top para descer o cartão -->
                 <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
                     <h5 class="card-title text-white">Descubra mais sobre Astronomia</h5>
                     <p class="card-text text-white mb-4">Explore uma seleção de livros sobre astronomia e aumente seu conhecimento sobre o cosmos.</p>
@@ -184,13 +183,15 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
+
 
     
 
     <?php include 'footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         document.querySelectorAll('.btn-primary').forEach(button => {
             button.setAttribute('href', 'novidadeseeventos.php');

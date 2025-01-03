@@ -49,14 +49,18 @@ $totalPages = ceil($totalBooks / $booksPerPage);
 </div>
 
 <div class="container mt-5">
-    <div class="row justify-content-center g-4">
+    <div class="row justify-content-center g-3">
         <?php foreach ($booksToShow as $index => $book): ?>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4 d-flex justify-content-center">
-                <img src="<?= $book['src']; ?>" alt="<?= $book['title']; ?>" class="img-fluid" data-bs-toggle="modal" data-bs-target="#bookModal<?= $index + 1 ?>">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 mb-4 d-flex justify-content-center">
+                <img src="<?= $book['src']; ?>" alt="<?= $book['title']; ?>" class="img-fluid" data-bs-toggle="modal" data-bs-target="#bookModal<?= $index + 1 ?>" style="max-width: 80%; height: auto;">
             </div>
         <?php endforeach; ?>
     </div>
 </div>
+
+
+
+
 
 
 <?php foreach ($booksToShow as $index => $book): ?>
